@@ -1,0 +1,53 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Contract
+    network: mainnet
+    source:
+      address: "0xEEA92913d8AA554a102ED5B4F0A6206E6D8d59D5"
+      abi: Contract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.2
+      language: wasm/assemblyscript
+      entities:
+        - AddUnclaimedSponsorBonus
+        - BuyNbuForEth
+        - BuyNbuForToken
+        - OwnershipTransferred
+        - Paused
+        - ProcessSponsorBonus
+        - Rescue
+        - RescueToken
+        - Unpaused
+        - UpdateEthNbuExchangeRate
+        - UpdateTokenNbuExchangeRate
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: AddUnclaimedSponsorBonus(address,uint256)
+          handler: handleAddUnclaimedSponsorBonus
+        - event: BuyNbuForEth(uint256,uint256,address)
+          handler: handleBuyNbuForEth
+        - event: BuyNbuForToken(address,uint256,uint256,address)
+          handler: handleBuyNbuForToken
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: ProcessSponsorBonus(address,address,uint256)
+          handler: handleProcessSponsorBonus
+        - event: Rescue(address,uint256)
+          handler: handleRescue
+        - event: RescueToken(address,address,uint256)
+          handler: handleRescueToken
+        - event: Unpaused(address)
+          handler: handleUnpaused
+        - event: UpdateEthNbuExchangeRate(uint256)
+          handler: handleUpdateEthNbuExchangeRate
+        - event: UpdateTokenNbuExchangeRate(address,uint256)
+          handler: handleUpdateTokenNbuExchangeRate
+      file: ./src/mapping.ts

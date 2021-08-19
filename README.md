@@ -1,14 +1,13 @@
 1) Регистрация на сайте https://thegraph.com/
 2) После авторизации перейти https://thegraph.com/legacy-explorer/dashboard, нажать на кнопку "add subgraph", заполнить поля
 3) Заходим в cmd/terminal, вводим команду:
-```yarn global add @graphprotocol/graph-cli```
+```yarn global add @graphprotocol/graph-cli
 или
-```yarn global add @graphprotocol/graph-cli```
+```yarn global add @graphprotocol/graph-cli
 
 4) Инициализируем проект сабграфа
 ```
 graph init --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>
-```
 
     4.1) Указываем имя сабграфа
     4.2) Имя папки

@@ -22,14 +22,12 @@ graph init --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>
 5) Ввести команду `graph auth --product hosted-service <ACCESS_TOKEN>` Token можно найти на странице сабграфа
 6) Для деплоя нужно сгенеривровать graphql модели и типы с помощью команды `yarn codegen` и выполнить команду `yarn deploy`
 Для разработки необходимо установить старотовый блок, с которого сабграф будет начинать обрабатывать информацию, Для этого в файл `subgraph.yaml` нужно добавить номер блока нужного нам блока
-```
-dataSources:
+```dataSources:
   - kind: ethereum/contract
     name: Contract
     network: mainnet
     source:
       address: "0xEEA92913d8AA554a102ED5B4F0A6206E6D8d59D5"
       abi: Contract
-      >>startBlock: 12737701 //
-```
+      >>startBlock: 12737701```
 

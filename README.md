@@ -30,5 +30,6 @@ graph init --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>
     source:
       address: "0xEEA92913d8AA554a102ED5B4F0A6206E6D8d59D5"
       abi: Contract
-      >>startBlock: 12737701```
+      >>startBlock: 12737701
+```
 

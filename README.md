@@ -32,4 +32,5 @@ graph init --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>
       abi: Contract
       >>startBlock: 12737701
 ```
+Если этого не сделать, сабграф будет синхронизироваться > 30 минут
 
